@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![HUGE, formerly "php-login" logo](_pictures/huge.png)
 
 # HUGE
@@ -625,3 +626,6 @@ More here on Stackflow: [How to prevent favicon.ico requests?](http://stackoverf
 ### My blog
 
 I'm also blogging at **[Dev Metal](http://www.dev-metal.com)**.
+=======
+# LingoHuge
+>>>>>>> 69b88505517ab7c80e423f42f24186486c47cbb6
