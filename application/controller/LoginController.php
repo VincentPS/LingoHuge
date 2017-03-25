@@ -82,9 +82,9 @@ class LoginController extends Controller
         // run the loginWithCookie() method in the login-model, put the result in $login_successful (true or false)
          $login_successful = LoginModel::loginWithCookie(Request::cookie('remember_me'));
 
-        // if login successful, redirect to dashboard/index ...
+        // if login successful, redirect to highscores/index ...
         if ($login_successful) {
-            Redirect::to('dashboard/index');
+            Redirect::to('highscores/index');
         } else {
             // if not, delete cookie (outdated? attack?) and route user to login form to prevent infinite login loops
             LoginModel::deleteCookie();

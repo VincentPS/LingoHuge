@@ -3,7 +3,7 @@
 /**
  * This controller shows an area that's only visible for logged in users (because of Auth::checkAuthentication(); in line 16)
  */
-class DashboardController extends Controller
+class HighscoresController extends Controller
 {
     /**
      * Construct this object by extending the basic Controller class
@@ -17,10 +17,10 @@ class DashboardController extends Controller
     }
 
     /**
-     * This method controls what happens when you move to /dashboard/index in your app.
+     * This method controls what happens when you move to /highscores/index in your app.
      */
     public function index()
     {
-        $this->View->render('dashboard/index');
+        $this->View->render('highscores/index');
     }
 }

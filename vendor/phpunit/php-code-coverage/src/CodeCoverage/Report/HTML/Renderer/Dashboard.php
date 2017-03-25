@@ -9,7 +9,7 @@
  */
 
 /**
- * Renders the dashboard for a PHP_CodeCoverage_Report_Node_Directory node.
+ * Renders the highscores for a PHP_CodeCoverage_Report_Node_Directory node.
  *
  * @since Class available since Release 1.1.0
  */

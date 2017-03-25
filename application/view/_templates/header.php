@@ -1,13 +1,17 @@
 <!doctype html>
 <html>
 <head>
-    <title>HUGE</title>
+    <title>Lingo</title>
     <!-- META -->
     <meta charset="utf-8">
     <!-- send empty favicon fallback to prevent user's browser hitting the server for lots of favicon requests resulting in 404s -->
     <link rel="icon" href="data:;base64,=">
     <!-- CSS -->
+    <script src="<?php echo Config::get('URL'); ?>javascript/words.js"></script>
+    <script src="<?php echo Config::get('URL'); ?>javascript/main.js"></script>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
 </head>
 <body>
     <!-- wrapper, to center website -->
@@ -25,8 +29,8 @@
                 <a href="<?php echo Config::get('URL'); ?>profile/index">Profiles</a>
             </li>
             <?php if (Session::userIsLoggedIn()) { ?>
-                <li <?php if (View::checkForActiveController($filename, "dashboard")) { echo ' class="active" '; } ?> >
-                    <a href="<?php echo Config::get('URL'); ?>dashboard/index">Dashboard</a>
+                <li <?php if (View::checkForActiveController($filename, "highscores")) { echo ' class="active" '; } ?> >
+                    <a href="<?php echo Config::get('URL'); ?>highscores/index">Highscores</a>
                 </li>
                 <li <?php if (View::checkForActiveController($filename, "note")) { echo ' class="active" '; } ?> >
                     <a href="<?php echo Config::get('URL'); ?>note/index">My Notes</a>
