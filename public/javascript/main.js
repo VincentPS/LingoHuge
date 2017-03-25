@@ -1,4 +1,8 @@
 "use strict";
+function buttonGameStart() {
+    window.location.href = "/LingoHuge/Game";
+}
+
 function startGame() {
     localStorage.setItem('activeRow', 1);
     drawGrid();
