@@ -5,9 +5,9 @@ function buttonGameStart() {
 
 function startGame() {
     localStorage.setItem('activeRow', 1);
+    makeWord();
     drawGrid();
     setActiveRow(localStorage.getItem('activeRow'));
-    makeWord();
 }
 
 function makeWord() {
@@ -34,12 +34,14 @@ function drawRow(lingoTable, identifier) {
 }
 
 function drawCols(row, identifierCol) {
+    let currentWord = localStorage.getItem('word').split("");
     let tdEl = document.createElement('td');
     tdEl.setAttribute('id', 'letter' + identifierCol);
     let textAreaEl = document.createElement('textarea');
     textAreaEl.classList.add("letterInput");
     textAreaEl.setAttribute("maxlength", "1");
     textAreaEl.setAttribute('disabled', "");
+    textAreaEl.value = currentWord[0];
     tdEl.appendChild(textAreaEl);
     row.appendChild(tdEl);
 }
@@ -90,11 +92,11 @@ function checkResult() {
     result = filter(currentWord, wordArray);
     for (let j = 0; j < result.length; j++) {
         if (result[j] === 1) {
-            previousRow.childNodes[j].childNodes[0].style.backgroundColor = "#84ff35";
+            previousRow.childNodes[j].childNodes[0].style.backgroundColor = "#e4453b";
+            previousRow.childNodes[j].childNodes[0].style.borderRadius = "5%";
         } else if (result[j] === 2) {
             previousRow.childNodes[j].childNodes[0].style.backgroundColor = "#ffe033";
-        } else {
-            previousRow.childNodes[j].childNodes[0].style.backgroundColor = "#e4453b";
+            previousRow.childNodes[j].childNodes[0].style.borderRadius = "45%";
         }
     }
 }
