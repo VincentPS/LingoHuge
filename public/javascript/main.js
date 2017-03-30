@@ -34,26 +34,29 @@ function drawRow(lingoTable, identifier) {
 }
 
 function drawCols(row, identifierCol) {
-    let currentWord = localStorage.getItem('word').split("");
     let tdEl = document.createElement('td');
     tdEl.setAttribute('id', 'letter' + identifierCol);
     let textAreaEl = document.createElement('textarea');
     textAreaEl.classList.add("letterInput");
     textAreaEl.setAttribute("maxlength", "1");
     textAreaEl.setAttribute('disabled', "");
-    textAreaEl.value = currentWord[0];
     tdEl.appendChild(textAreaEl);
     row.appendChild(tdEl);
 }
 
 function setActiveRow(identifier) {
+    let currentWord = localStorage.getItem('word').split("");
     if (identifier < 7) {
         let currentRow = document.getElementById("row" + identifier);
         for (let i = 0; i < 5; i++) {
             currentRow.childNodes[i].childNodes[0].removeAttribute('disabled');
+            currentRow.childNodes[0].childNodes[0].value = currentWord[0];
+            currentRow.childNodes[0].childNodes[0].style.backgroundColor = "#e4453b";
+            currentRow.childNodes[0].childNodes[0].style.borderRadius = "5%";
         }
     } else {
         document.getElementById("submitWord").outerHTML = "";
+        window.location.href = "Game/GameOver";
     }
 }
 
@@ -79,26 +82,41 @@ function filterLetters(letterCurrentWord, letterGivenWord) {
 
 function checkResult() {
     let result = [];
+    let counter = 1;
     let currentWord = localStorage.getItem('word').split("");
     let wordArray = getLetters(localStorage.getItem('activeRow'));
     let newRowValue = parseInt(localStorage.getItem('activeRow')) + 1;
     localStorage.setItem('activeRow', newRowValue);
-    setActiveRow(localStorage.getItem('activeRow'));
     disablePreviousRow();
-    let previousRow = document.getElementById("row" + (parseInt(localStorage.getItem('activeRow')) - 1));
     for (let i = 0; i < currentWord.length; i++) {
         result.push(filterLetters(currentWord[i], wordArray[i]));
     }
     result = filter(currentWord, wordArray);
-    for (let j = 0; j < result.length; j++) {
-        if (result[j] === 1) {
-            previousRow.childNodes[j].childNodes[0].style.backgroundColor = "#e4453b";
-            previousRow.childNodes[j].childNodes[0].style.borderRadius = "5%";
-        } else if (result[j] === 2) {
-            previousRow.childNodes[j].childNodes[0].style.backgroundColor = "#ffe033";
-            previousRow.childNodes[j].childNodes[0].style.borderRadius = "45%";
+    setResult(result, counter);
+}
+
+/**
+ * TODO: ONKEYPRESS TAB
+ */
+
+
+function setResult(result, counter) {
+    let previousRow = document.getElementById("row" + (parseInt(localStorage.getItem('activeRow')) - 1));
+    setTimeout(function () {
+        if (result[counter] === 1) {
+            previousRow.childNodes[counter].childNodes[0].style.backgroundColor = "#e4453b";
+            previousRow.childNodes[counter].childNodes[0].style.borderRadius = "5%";
+        } else if (result[counter] === 2) {
+            previousRow.childNodes[counter].childNodes[0].style.backgroundColor = "#ffe033";
+            previousRow.childNodes[counter].childNodes[0].style.borderRadius = "45%";
         }
-    }
+        counter++;
+        if (counter < result.length) {
+            setResult(result, counter);
+        } else {
+            setActiveRow(localStorage.getItem('activeRow'));
+        }
+    }, 300)
 }
 
 function filter(attempt, correct) {
