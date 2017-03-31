@@ -8,6 +8,7 @@ function startGame() {
     makeWord();
     drawGrid();
     setActiveRow(localStorage.getItem('activeRow'));
+    eventListenerTable();
 }
 
 function makeWord() {
@@ -98,6 +99,26 @@ function checkResult() {
 /**
  * TODO: ONKEYPRESS TAB
  */
+function eventListenerTable() {
+    let table = document.getElementById("lingoTable");
+    table.addEventListener('keyup', function (e) {
+        let target = e.target;
+        let maxLength = parseInt(target.getAttribute('maxlength'));
+        let myLength = target.value.length;
+        console.log(typeof myLength);
+        console.log(typeof maxLength);
+        console.log("myLength: " + myLength, "maxLength: " + maxLength);
+        if (myLength >= maxLength) {
+            let next = target.value;
+            console.log(next);
+            if (next == target && target !== null) {
+                console.log("Target werkt");
+                next.removeAttribute('readonly');
+                next.focus();
+            }
+        }
+    });
+}
 
 
 function setResult(result, counter) {
