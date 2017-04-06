@@ -1,5 +1,8 @@
 "use strict";
 
+let lengthRows = 5;
+let rowIds = 7;
+
 
 /**
  * TODO: woord zetten in een cookie/ajax call naar de server.
@@ -17,16 +20,16 @@ function startGame() {
 }
 
 function makeWord() {
-    let randomValue = Math.floor(Math.random() * 478) + 1;
+    let randomValue = Math.floor(Math.random() * words.length) + 1;
     let currentWord = words[randomValue];
     localStorage.setItem('word', currentWord);
 }
 
 function drawGrid() {
     let lingoTable = document.getElementById("lingoTable");
-    for (let identifier = 1; identifier < 7; identifier++) {
+    for (let identifier = 1; identifier < rowIds; identifier++) {
         let row = drawRow(lingoTable, identifier);
-        for (let identifierCol = 1; identifierCol < 6; identifierCol++) {
+        for (let identifierCol = 1; identifierCol < (rowIds - 1); identifierCol++) {
             drawCols(row, identifierCol)
         }
     }
@@ -55,23 +58,23 @@ function drawCols(row, identifierCol) {
  */
 function setActiveRow(identifier) {
     let currentWord = localStorage.getItem('word').split("");
-    if (identifier < 7) {
+    if (identifier < rowIds) {
         let currentRow = document.getElementById("row" + identifier);
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < lengthRows; i++) {
+            let textArea = currentRow.childNodes[0].childNodes[0];
             currentRow.childNodes[i].childNodes[0].removeAttribute('disabled');
-            currentRow.childNodes[0].childNodes[0].value = currentWord[0];
-            currentRow.childNodes[0].childNodes[0].style.backgroundColor = "#e4453b";
-            currentRow.childNodes[0].childNodes[0].style.borderRadius = "5%";
+            textArea.value = currentWord[0];
+            textArea.style.backgroundColor = "#e4453b";
+            textArea.style.borderRadius = "5%";
         }
     } else {
-        document.getElementById("submitWord").outerHTML = "";
         window.location.href = "Game/GameOver";
     }
 }
 
 function disablePreviousRow() {
     let previousRow = document.getElementById("row" + (parseInt(localStorage.getItem('activeRow')) - 1));
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < lengthRows; i++) {
         previousRow.childNodes[i].childNodes[0].setAttribute('disabled', '');
     }
 }
@@ -79,7 +82,7 @@ function disablePreviousRow() {
 function getLetters(identifier) {
     let wordArray = [];
     let currentRow = document.getElementById("row" + identifier);
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < lengthRows; i++) {
         wordArray.push(currentRow.childNodes[i].childNodes[0].value);
     }
     return wordArray;

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="376c14ef-393b-4c1b-b186-9a14f61f5995" name="Default" comment="Lingo woorden worden gecheckt. Ook met een timeout function apart voor dit process.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/view/Game/Completed.php" />
+    <list default="true" id="376c14ef-393b-4c1b-b186-9a14f61f5995" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controller/GameController.php" afterPath="$PROJECT_DIR$/application/controller/GameController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/view/Game/GameOver.php" afterPath="$PROJECT_DIR$/application/view/Game/GameOver.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/view/Game/index.php" afterPath="$PROJECT_DIR$/application/view/Game/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/main.js" afterPath="$PROJECT_DIR$/public/javascript/main.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascript/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="320">
+              <caret line="168" column="5" lean-forward="true" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="words.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascript/words.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -93,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Completed.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Completed.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/view/Game/Completed.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="80">
+              <caret line="4" column="83" lean-forward="false" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -108,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
               <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameOver.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/view/Game/GameOver.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,8 +160,8 @@
         <option value="$PROJECT_DIR$/application/view/Game/GameOver.php" />
         <option value="$PROJECT_DIR$/application/view/Game/index.php" />
         <option value="$PROJECT_DIR$/application/controller/GameController.php" />
-        <option value="$PROJECT_DIR$/public/javascript/main.js" />
         <option value="$PROJECT_DIR$/application/view/Game/Completed.php" />
+        <option value="$PROJECT_DIR$/public/javascript/main.js" />
       </list>
     </option>
   </component>
@@ -526,7 +522,7 @@
       <workItem from="1490439057162" duration="101000" />
       <workItem from="1490439230941" duration="291000" />
       <workItem from="1490440446091" duration="19027000" />
-      <workItem from="1490860408287" duration="18406000" />
+      <workItem from="1490860408287" duration="19594000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1490439253747</created>
@@ -563,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490859664497</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Lingo project afgerond.">
+      <created>1491479391062</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491479391062</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39423000" />
+    <option name="totallyTimeSpent" value="40611000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,21 +616,14 @@
     <MESSAGE value="Laatste commit voor vandaag. Pagina gemaakt voor het spel." />
     <MESSAGE value="Lingo werkt nu in het HUGE framework. Je kan inloggen, registreren, lingo spelen en checken of woorden kloppen. &#10;Dit wordt gedaan doormiddel van een javascript function onderaan de file main.js.&#10;&#10;Laatste commit voor vandaag (voorlopig)." />
     <MESSAGE value="Lingo woorden worden gecheckt. Ook met een timeout function apart voor dit process." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lingo woorden worden gecheckt. Ook met een timeout function apart voor dit process." />
+    <MESSAGE value="Lingo project afgerond." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lingo project afgerond." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/view/Game/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/Game/GameOver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -923,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascript/words.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/Game/GameOver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -971,14 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascript/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/index/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -997,8 +977,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/view/Game/Completed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="80">
+          <caret line="4" column="83" lean-forward="false" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/words.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="740" column="0" lean-forward="false" selection-start-line="740" selection-start-column="0" selection-end-line="740" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="168" column="5" lean-forward="true" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
           <folding />
         </state>
       </provider>
