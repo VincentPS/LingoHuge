@@ -1,8 +1,6 @@
 <div class="container">
     <h1>Lingo</h1>
     <div class="box">
-        <!-- echo out the system feedback (error and success messages) -->
-        <?php $this->renderFeedbackMessages(); ?>
         <div class="gameWindow">
             <table id="table">
                 <tbody id="lingoTable"></tbody>

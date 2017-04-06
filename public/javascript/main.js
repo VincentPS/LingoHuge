@@ -1,4 +1,9 @@
 "use strict";
+
+
+/**
+ * TODO: woord zetten in een cookie/ajax call naar de server.
+ */
 function buttonGameStart() {
     window.location.href = "/LingoHuge/Game";
 }
@@ -45,6 +50,9 @@ function drawCols(row, identifierCol) {
     row.appendChild(tdEl);
 }
 
+/**
+ * TODO: Style apart van de logica. (class toevoegen aan een childnode + css).
+ */
 function setActiveRow(identifier) {
     let currentWord = localStorage.getItem('word').split("");
     if (identifier < 7) {
@@ -81,6 +89,10 @@ function filterLetters(letterCurrentWord, letterGivenWord) {
     return letterCurrentWord === letterGivenWord;
 }
 
+/**
+ * TODO: GULP even installeren :)
+ */
+
 function checkResult() {
     let result = [];
     let counter = 1;
@@ -105,21 +117,15 @@ function eventListenerTable() {
         let target = e.target;
         let maxLength = parseInt(target.getAttribute('maxlength'));
         let myLength = target.value.length;
-        console.log(typeof myLength);
-        console.log(typeof maxLength);
-        console.log("myLength: " + myLength, "maxLength: " + maxLength);
         if (myLength >= maxLength) {
             let next = target.value;
-            console.log(next);
             if (next == target && target !== null) {
-                console.log("Target werkt");
                 next.removeAttribute('readonly');
                 next.focus();
             }
         }
     });
 }
-
 
 function setResult(result, counter) {
     let previousRow = document.getElementById("row" + (parseInt(localStorage.getItem('activeRow')) - 1));
@@ -135,11 +141,15 @@ function setResult(result, counter) {
         if (counter < result.length) {
             setResult(result, counter);
         } else {
+            gameStatus(result);
             setActiveRow(localStorage.getItem('activeRow'));
         }
     }, 300)
 }
 
+/**
+ * TODO: OF opsplitsen in 2 function OF combineren met else if.
+ */
 function filter(attempt, correct) {
     let result = [];
     for (let letter in attempt) {
@@ -170,4 +180,20 @@ function filter(attempt, correct) {
         }
     }
     return result;
+}
+
+function gameStatus(result) {
+    let correct = 1;
+    let all = true;
+    let none = true;
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] !== correct) {
+            all = false;
+        } else {
+            none = false;
+        }
+    }
+    if (all) {
+        window.location.href = "Game/Completed";
+    }
 }

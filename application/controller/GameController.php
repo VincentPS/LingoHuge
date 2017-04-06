@@ -16,4 +16,9 @@ class GameController extends Controller
     {
         $this->View->render('Game/GameOver');
     }
+
+    public function completed()
+    {
+        $this->View->render('Game/Completed');
+    }
 }
